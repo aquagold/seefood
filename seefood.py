@@ -10,6 +10,7 @@ def save_uploadedfile(uploadedfile):
     
 st.subheader("See Food")
 
+"""
 image_file = st.file_uploader("Upload Images", type=["png","jpg","jpeg"])
 
 im_file_path = '/Users/vikassewani/Desktop/thisimage.png'
@@ -35,3 +36,4 @@ for i in range(0, len(arr)):
     full_string.append(arr[i]['text'])
 
 st.write(f' '.join(full_string[0:min(10,len(full_string))]))
+"""
