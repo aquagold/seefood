@@ -1,6 +1,13 @@
 import streamlit as st
 
-
+def save_uploadedfile(uploadedfile):
+     with open(os.path.join("tempDir",uploadedfile.name),"wb") as f:
+         f.write(uploadedfile.getbuffer())
+     return st.success("Saved File:{} to tempDir".format(uploadedfile.name))
+ 
+    
+ 
+    
 st.subheader("See Food")
 
 image_file = st.file_uploader("Upload Images", type=["png","jpg","jpeg"])
@@ -12,6 +19,8 @@ if image_file is not None:
     file_details = {"filename":image_file.name, "filetype":image_file.type,
                     "filesize":image_file.size}
     st.write(file_details)
+    save_uploadedfile(image_file)
+
 
 api_url = 'https://api.api-ninjas.com/v1/imagetotext'
 
