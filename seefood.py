@@ -24,7 +24,7 @@ def load_image(image_file):
 st.subheader("See Food")
 image_file = st.file_uploader("Upload Images", type=["png","jpg","jpeg"])
 
-"""
+
 if image_file is not None:
     
     st.image(load_image(image_file),width=250)
@@ -32,7 +32,8 @@ if image_file is not None:
                     "filesize":image_file.size}
     #st.write(file_details)
     save_uploadedfile(image_file)
-    
+
+"""
     ## Extract data
     image_dir = ''.join([os.getcwd(), '/tempDir/'])
     image_file_descriptor = open(''.join([image_dir, image_file.name]), 'rb')
@@ -51,5 +52,4 @@ if image_file is not None:
     st.write(f' '.join(full_string[0:min(10,len(full_string))]))
     
     #Call dall e!
-    
-"""
+"""   
