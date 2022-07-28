@@ -33,12 +33,12 @@ if image_file is not None:
     #st.write(file_details)
     save_uploadedfile(image_file)
 
-"""
+
     ## Extract data
     image_dir = ''.join([os.getcwd(), '/tempDir/'])
     image_file_descriptor = open(''.join([image_dir, image_file.name]), 'rb')
 
-
+"""
     api_url = 'https://api.api-ninjas.com/v1/imagetotext'
     files = {'image': image_file_descriptor}
     r = requests.post(api_url, files=files, headers={'X-Api-Key': 'hBeHlA2f2g8gkNunbnBDXg==bgAu26luCQTY4LLO'})
@@ -52,4 +52,4 @@ if image_file is not None:
     st.write(f' '.join(full_string[0:min(10,len(full_string))]))
     
     #Call dall e!
-"""   
+"""
