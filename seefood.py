@@ -42,7 +42,7 @@ if image_file is not None:
     api_url = 'https://api.api-ninjas.com/v1/imagetotext'
     files = {'image': image_file_descriptor}
     r = requests.post(api_url, files=files, headers={'X-Api-Key': 'hBeHlA2f2g8gkNunbnBDXg==bgAu26luCQTY4LLO'})
-"""
+
     full_string =[]
     arr = r.json()
 
@@ -51,5 +51,3 @@ if image_file is not None:
         
     st.write(f' '.join(full_string[0:min(10,len(full_string))]))
     
-    #Call dall e!
-"""
