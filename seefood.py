@@ -50,7 +50,7 @@ if image_file is not None:
     for i in range(0, len(arr)):
         full_string.append(arr[i]['text'])
     
-    full_string = ' '.join(full_string[0:min(100,len(full_string))])
+    full_string = ' '.join(full_string[0:min(20,len(full_string))])
     st.write(full_string)
     
     
