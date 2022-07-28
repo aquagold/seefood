@@ -47,7 +47,7 @@ if image_file is not None:
     full_string =[]
     arr = r.json()
 
-"""
+
     for i in range(0, len(arr)):
         full_string.append(arr[i]['text'])
     
@@ -56,4 +56,3 @@ if image_file is not None:
     
     
     create_and_show_images(full_string, 1)
-"""
