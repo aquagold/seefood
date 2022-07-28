@@ -4,6 +4,7 @@ import requests
 import websockets
 import json
 import os
+from dalle import create_and_show_images
 
 
 def save_uploadedfile(uploadedfile):
@@ -48,6 +49,9 @@ if image_file is not None:
 
     for i in range(0, len(arr)):
         full_string.append(arr[i]['text'])
-        
-    st.write(f' '.join(full_string[0:min(10,len(full_string))]))
     
+    full_string = ' '.join(full_string[0:min(10,len(full_string))])
+    st.write(full_string)
+    
+    
+    create_and_show_images(full_string, 1)
