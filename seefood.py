@@ -24,7 +24,7 @@ def load_image(image_file):
 st.subheader("See Food")
 image_file = st.file_uploader("Upload Images", type=["png","jpg","jpeg"])
 
-
+"""
 if image_file is not None:
     
     st.image(load_image(image_file),width=250)
@@ -52,3 +52,4 @@ if image_file is not None:
     
     #Call dall e!
     
+"""
