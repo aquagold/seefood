@@ -38,11 +38,11 @@ if image_file is not None:
     image_dir = ''.join([os.getcwd(), '/tempDir/'])
     image_file_descriptor = open(''.join([image_dir, image_file.name]), 'rb')
 
-"""
+
     api_url = 'https://api.api-ninjas.com/v1/imagetotext'
     files = {'image': image_file_descriptor}
     r = requests.post(api_url, files=files, headers={'X-Api-Key': 'hBeHlA2f2g8gkNunbnBDXg==bgAu26luCQTY4LLO'})
-
+"""
     full_string =[]
     arr = r.json()
 
